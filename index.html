@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css"/>
+</head>
+<body>
+    <ul class="super_map" id="super_map">
+        <!-- 游戏加载时间 -->
+        <li id="game_Time" class="super_map_li ">
+            <div class="loader_01" id="loader_01">
+                <div class="Progress">请稍后，游戏正在加载...</div>
+                <meter id="meter_scroll" value="0" min = "0" max="100"></meter>
+            </div>
+        </li>
+        <!-- 制造商 -->
+        <li id="maker" class="super_map_li ">
+            <div class="maker_box01">
+                这是一个很古老的传说
+            </div>
+        </li>
+
+        <!-- 主菜单 -->
+        <li id="menus" class="super_map_li menus_li">
+            <div class="menus_div" id="menus_go" >
+                <img src="./images/mota.png" alt="hehe" />
+            </div>
+            <div class="menus_div" id="menus_start">
+                <a href="#">开始游戏</a>
+            </div>
+             <div class="menus_div" id="menus_state">
+                <a href="#">游戏说明</a>
+            </div>
+            <div class="menus_div" id="menus_close"  onclick="window.opener=null;window.open('','_self');window.close();">
+                <a href="#">离开游戏</a>
+            </div>
+             <div class="menus_div" id="menus_f5">
+                <a href="">重新加载</a>
+            </div>
+        </li>
+
+        <!-- 地图 -->
+        <li id="game_map01" class="super_map_li ">
+            <!-- 左边地图 -->
+            <div class="game_mapLeft" style="font-size:30px;color:width">
+                <div style="border: 5px solid #CC6600;">
+                    <img src="./images/person_t.png" alt="">
+                    <img src="./images/person_b.png" alt="">
+                    <img src="./images/person_l.png" alt="">
+                    <img src="./images/person_r.png" alt=""><br />
+                    <img src="./images/ladder_next.png" alt="">进入下一楼<br />
+                    <img src="./images/ladder_previous.png" alt="">返回上一楼<br />
+                </div>
+                <div class="person_nature">
+                    <div class="person_3s person_3s">
+                        <img valign="top" src="./images/person_b.png" alt="">
+                        <span style="line-height:58px;display: inline-block;" >：老哥</span>
+                    </div>
+                    <div class="person_3s">生命：<span id="person_3s1">8000</span></div>
+                    <div class="person_3s">攻击：<span id="person_3s2">50</span></div>
+                    <div class="person_3s">防御：<span id="person_3s3">45</span></div>
+                    <div class="person_3s">当前的楼层：<span style="font-size:45px;" id="floor_ceng">1</span></div>
+                </div>
+
+                <div>
+                    <div class="super_btn">
+                        <div>
+                            <button class="btn_sd btn_sd4">上</button>
+                        </div>
+
+                        <div>
+                            <button class="btn_sd btn_sd1">左</button>
+                            <button class="btn_sd btn_sd2">下</button>
+                            <button class="btn_sd btn_sd3">右</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边地图 -->
+            <div id="map_right" class="game_mapRight">
+
+            </div>
+            <!-- 拾取物品信息 -->
+            <div class="game_msg" id="game_msg" style="opacity: 0;">
+                    你拾取了一个护盾 增加5点防御
+            </div>
+            <!-- vs信息 -->
+            <div id="vs_info_map" class="vs_info">
+                <div class="vs_text"><img width="130px" src="./images/vs00.png" alt=""></div>
+                <div id="person_info" class="p_info">
+                    <table style="color:#FFFFFF; font-size:26px;">
+                        <tr>
+                            <td rowspan="5" border="3px">
+                                <img id="monster_img" src="./images/monster1.png" alt="图片未加载">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><u>生命值：   </u></td>
+                        </tr>
+                        <tr>
+                            <td class="info_number monster_date_elements">1000</td>
+                        </tr>
+                        <tr>
+                            <td><u>攻击力：   </u></td>
+                        </tr>
+                            <tr>
+                                <td class="info_number monster_date_elements">60</td>
+                            </tr>
+                        </tr>
+                         <tr>
+                            <td>怪物</td>
+                            <td><u>防御力：   </u></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td  class="info_number monster_date_elements">5</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="monster_info" class="m_info">
+                    <table style="color:#FFFFFF; font-size:26px;">
+                        <tr>
+                            <td rowspan="5" border="3px">
+                                <img src="./images/person_b.png" alt="图片未加载">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><u>生命值：   </u></td>
+                        </tr>
+                        <tr>
+                            <td class="info_number persons_date_elements">8000</td>
+                        </tr>
+                        <tr>
+                            <td><u>攻击力：   </u></td>
+                        </tr>
+                            <tr>
+                                <td class="info_number persons_date_elements">60</td>
+                            </tr>
+                        </tr>
+                         <tr>
+                            <td>老哥</td>
+                            <td><u>防御力：   </u></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td  class="info_number persons_date_elements">5</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </li>
+    </ul> 
+    <div>
+       <audio id="bg_music" autoplay preload="auto" src="./bgmusic.mp3" loop>
+       </audio>
+    </div>
+    <script src="./js/index.js">
+    </script>
+</body>
+</html>

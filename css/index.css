@@ -1,0 +1,190 @@
+﻿meter{
+    width: 500px;
+    height: 5px;
+}
+.super_map{
+    width: 1320px;
+    height: 890px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin: auto;
+    background-color: black;
+    position:relative;
+
+}
+.super_map_li{
+    background-color: black;
+    width: 1320px;
+    height: 890px;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    top:0;
+    left:0; 
+    transition: opacity 2s;
+    color:white;
+}
+
+/*游戏加载中*/
+.super_map > li:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+    font-size:30px;
+}
+.loader_01{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/*制作者*/
+.super_map > li:nth-child(2){
+    /*请勿删除*/
+}
+.maker_box01{
+    margin-top:30%; 
+    text-align:center;
+    font-size: 50px;
+}
+
+/*主菜单*/
+.menus_li{
+    text-align:center;
+}
+.menus_div{
+    padding-top:25px; 
+    text-align:center;
+    font-size: 50px;
+}
+.menus_div > a{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+.menus_div > a:hover{
+    background:rgba(255,255,255,.2);
+    /* -webkit-box-shadow: 0px 10px 10px #FFFFFF;
+    box-shadow: 0px 10px 10px #FFFFFF; */
+}
+
+/*地图*/
+#game_map01{
+    background-image: url('../images/bg.png');
+    font-size: 0px;
+    overflow: hidden;
+}
+
+.game_mapLeft{
+    width: 330px;
+    height: 880px;
+    padding-left: 40px;
+    padding-top: 40px;    
+    float: left;
+}
+.game_mapRight{
+    width: 880px;
+    height: 880px;
+    border:5px solid #CC6600;
+    overflow: hidden;
+    float: right;
+}
+.map,.wall{
+    width: 55px;
+    height: 55px;
+    float: left;
+}
+.wall{
+    background-image: url("../images/wall.png");
+} 
+.person1,.monster{
+    width: 55px;
+    height: 55px;
+    float: left;
+}
+/*拾取物品信息*/
+.game_msg{
+    background-image: url("../images/bg.png");
+    width: 650px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+    position: absolute;
+    right:100px;
+    top:0px;
+    bottom:0px;
+    margin: auto; 
+    border:5px solid #CC6600;
+    color:#FFFFFF;
+    opacity: 0;
+    /*transition: opacity .5s; */
+}
+
+/*对战信息*/
+.vs_info{
+    background-image: url("../images/bg.png");
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    right:100px;
+    top:0px;
+    bottom:0px;
+    margin: auto;
+    border:5px solid #CC6600;
+    color:#FFFFFF;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.vs_text{
+    position: absolute;
+    top:20%;
+    left:37%;
+}
+.p_info{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left:5%;
+    top:15%;
+}
+.m_info{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left:60%;
+    top:15%;
+}
+
+/*文字右对齐*/
+.info_number{
+    text-align: -webkit-right;
+    text-align:right;
+
+    font-size:30px;
+}
+/*人物属性*/
+.person_nature{
+    margin-top: 20px;
+    border: 5px solid #CC6600;
+
+}
+.person_3s{
+    margin:20px;
+}
+
+/*按钮*/
+.super_btn{
+    width: 200px;
+}
+.super_btn > div{
+    text-align: center;
+    margin-top:10px; 
+}
+.btn_sd{
+    height:50px;
+    width: 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor:pointer;
+}
